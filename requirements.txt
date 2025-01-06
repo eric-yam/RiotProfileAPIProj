@@ -1,0 +1,5 @@
+# Install dependencies so far : 
+# create new virtual environment and reinstall these dependencies 
+ipykernel==6.29.5
+requests==2.32.3
+Flask==3.1.0
