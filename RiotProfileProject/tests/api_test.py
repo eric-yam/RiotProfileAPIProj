@@ -4,15 +4,14 @@ import requests
 import os
 
 class APITest:
-
     def __init__(self):
         load_dotenv()
 
-        self.gameName = os.environ.get('gameName')
-        self.tagLine = os.environ.get('tagLine')
+        self.gameName = os.environ.get('GAME_NAME')
+        self.tagLine = os.environ.get('TAG_LINE')
 
         #TODO: Find api key automatically
-        self.apiKey = os.environ.get('apiKey')
+        self.apiKey = os.environ.get('API_KEY')
 
     def get_puuid(self) -> str:
         link = "https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{}/{}?api_key={}".format(
