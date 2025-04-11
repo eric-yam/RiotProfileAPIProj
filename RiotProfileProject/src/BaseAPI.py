@@ -15,6 +15,10 @@ class BaseAPI:
         self.session = requests.Session()
         self.session.headers.update(self.headers)
 
+    def get_response(self, url: str):
+        response = requests.get(url)
+        return response.json()
+
     def close(self):
         """
         closes the current session when done with API client
